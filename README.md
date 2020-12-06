@@ -38,7 +38,7 @@ SOBRE ESSE DIRETÓRIO
 Pode ser utilizada para criar div para envolver o input do formulário.      
 Opcionalmente, pode ser utilizada para criar uma div para envovler um atributo &#60;p>.     
 Ao utilizar a tag div, você deve abrir, passar atributos necessários(class, id) e depois fechá-la.   
-Veja exemplos no array de exemplo **$dados_form**.    
+Veja exemplos no array **$dados_form**.    
 - p   
 Pode ser utilizado para inserir um parágrafo antes ou depois do input do formulário.   
 É possível passar atributos como class e id.    
@@ -78,7 +78,8 @@ Não é necessário fechar tag span.
 "**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",      
 
 
-**4. Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**       
+**4. Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**  
+
 **Exemplos**        
 **&#60;chave:valor|>** => modo aceito      
 **&#60;chave:valor1 valor2 valor3|>** => modo aceito SOMENTE para classes e options     
