@@ -45,7 +45,7 @@ $dados_form= [
 
 
 
-#### Informações sobre como os parâmetros devem ser informados no array:
+#### Informações sobre como os parâmetros devem ser passados no array:
 
 Cada item do array deve ser composto por <chave:valor|>:  
 - chave: é o identificador  
@@ -66,9 +66,9 @@ Exemplos:
 &#60;options:Selecione-Selecione F-Feminino M-Masculino> => Exemplo de como devem ser passadas as options  
 
 Caso você precise inserir um texto antes do campo do formulário que você quer criar, utilize as tags  
-&#60;texto:Texto a ser exibido antes dos campos do formulário>	  		
-&#60;tag-texto: É a tag que vai envolver o parâmetro &#60;texto:> mencionado acima. Aqui você pode colocar div, h1 ao h6, p etc>  
-&#60;class-texto:classe css para ser aplicada a tag-texto, pode passar quantas classes precisar, basta dar espaço entre uma e outra>  
+&#60;texto:> Texto a ser exibido antes do campo do formulário  	  		
+&#60;tag-texto:> É a tag que vai envolver o parâmetro &#60;texto:> mencionado acima. Aqui você pode inserir div, h1 ao h6, p etc    
+&#60;class-texto:> Classe css para ser aplicada a &#60;tag-texto>, pode passar quantas classes precisar, basta dar espaço entre uma e outra>   
 			
 
 LISTA DE PARÂMETROS ACEITOS:  
