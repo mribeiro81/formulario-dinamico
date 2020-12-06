@@ -3,7 +3,7 @@ SOBRE ESSE DIRETÓRIO
 
 ### Aqui consta um pacote que pode ser utilizado para criar formulário de forma dinâmica.
 
-#### Tipos suportados:
+### Tipos suportados:
  
 - form => para definir o formulário  
 - button
@@ -48,9 +48,9 @@ Pode ser inserido antes ou depois do input do formulário.
 Não é necessário fechar tag span.    
 
 
-#### Informações sobre como os atributos devem ser passados no array:
+### Informações sobre como os atributos devem ser passados no array:
 
-Cada item do array deve ser composto por <chave:valor|>:    
+**Cada item do array deve ser composto por &#60;chave:valor|>:**    
 - chave: é o identificador    
 - (:) dois pontos: é o separador entre a chave e o valor    
 - valor: é o valor a ser associado a chave. Pode passar mais de um valor em parâmetros onde fizer sentido, como por exemplo duas ou mais classes para um input ou uma div.    
@@ -98,7 +98,6 @@ Cada item do array deve ser composto por <chave:valor|>:
 - checked
 - readonly
 - class
-- id
 
 		
 #### Exemplo prático para utilização:
