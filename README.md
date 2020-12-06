@@ -68,7 +68,7 @@ Cada item do array deve ser composto por <chave:valor|>:
 
 **Exemplo 3**    
 "**type:div**|class:form-group mt-3", //abrindo div que irá envolver o input  
-"**type:div**", //fechando a div que envolve o input  
+"**type:div**", //fechando a div 
 
 **Exemplo 4**    
 "**type:label**|for:sexo|value:Sexo|obrigatorio:*", //Label do input  
@@ -76,15 +76,17 @@ Cada item do array deve ser composto por <chave:valor|>:
 **Exemplo 5**    
 "**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",      
 
-Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.   
-Exemplos:    
-&#60;chave:valor|> => modo aceito    
-&#60;chave:valor1 valor2 valor3|> => modo aceito SOMENTE para classes e options   
-&#60;options:Selecione-Selecione F-Feminino M-Masculino> => Exemplo de como devem ser passadas as options de input select   
+
+**Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**     
+
+**Exemplos**        
+**&#60;chave:valor|>** => modo aceito      
+**&#60;chave:valor1 valor2 valor3|>** => modo aceito SOMENTE para classes e options     
+**&#60;options:Selecione-Selecione F-Feminino M-Masculino>** => Exemplo de como devem ser passadas as options de input select     
 
 **Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**
 
-**No momento de passar os atributos, você deve se perguntar:   
+**No momento de passar os atributos, você deve se perguntar:**   
 
 **- Quais atributos esse input ou tag suporta?**
 
