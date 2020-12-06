@@ -5,7 +5,7 @@ SOBRE ESSE DIRETÓRIO
 
 #### Tipos suportados:
  
-- form => elemento para definir o formulário  
+- form => para definir o formulário  
 - button
 - submit
 - text
@@ -33,10 +33,19 @@ SOBRE ESSE DIRETÓRIO
 
 **Observação: Alguns inputs HTML5 não são suportados pelos browsers, verifique antes de utilizar.**
 
-**Além de inputs de formulário, é possível criar:   
-- div (Pode ser utilizada para criar div para envolver o input do formulário. Opcionalmente, também é possível criar uma div, inserir um texto com o atributo &#60;p>. Ao utilizar a tag div, você deve abrir, passar atributos necessários(class, id) e depois fechá-la. Veja exemplos no array $dados_form).  
-- p (Pode ser utilizado para inserir um parágrafo antes ou depois do input do formulário. É possível passar atributos como class e id. Não é necessário o fechamento da tag  &#60;\p>).  
-- span (Pode ser inserido texto antes ou depois do input do formulário. É possível passar atributos como class e id). Não é necessário tag de fechamento.  
+**Além de inputs de formulário, é possível criar:**   
+- div     
+Pode ser utilizada para criar div para envolver o input do formulário.      
+Opcionalmente, pode ser utilizada para criar uma div para envovler um atributo &#60;p>.     
+Ao utilizar a tag div, você deve abrir, passar atributos necessários(class, id) e depois fechá-la.   
+Veja exemplos no array de exemplo **$dados_form**.    
+- p   
+Pode ser utilizado para inserir um parágrafo antes ou depois do input do formulário.   
+É possível passar atributos como class e id. Não é necessário fechar da tag p.     
+- span   
+Pode ser inserido antes ou depois do input do formulário.   
+É possível passar atributos como class e id para o span.     
+Não é necessário fechar tag span.    
 
 
 #### Informações sobre como os atributos devem ser passados no array:
@@ -47,24 +56,25 @@ Cada item do array deve ser composto por <chave:valor|>:
 - valor: é o valor a ser associado a chave. Pode passar mais de um valor em parâmetros onde fizer sentido, como por exemplo duas ou mais classes para um input ou uma div.    
 - (|) pipe: é o separador entre um atributo e outro	    			
 
-*Adicione os itens no array na ordem em que você deseja que seja exibido no formulário.*  
+**Adicione os itens no array na ordem em que você deseja que seja exibido no formulário.**  
 
-Todos os itens do array devem conter o tipo do atributo que será criado.    
-Exemplo 1:    
+**Todos os itens do array devem conter o tipo do atributo que será criado.**  
+
+**Exemplo 1**      
 "**type:form**|action:gravar.php|method:post|name:frmContato|id:frmContato",  
 
-Exemplo 2:    
-"*type:p*|class:paragrafo-form mt-4|value:Informe como prefere ser informado sobre nossas novidades",  
+**Exemplo 2**     
+"**type:p**|class:paragrafo-form mt-4|value:Informe como prefere ser informado sobre nossas novidades",  
 
-Exemplo 3:  
+**Exemplo 3**    
 "**type:div**|class:form-group mt-3", //abrindo div que irá envolver o input  
 "**type:div**", //fechando a div que envolve o input  
 
-Exemplo 4:   
+**Exemplo 4**    
 "**type:label**|for:sexo|value:Sexo|obrigatorio:*", //Label do input  
 
-Exemplo 5:  
-"**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",    
+**Exemplo 5**    
+"**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",      
 
 Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.   
 Exemplos:    
@@ -73,7 +83,11 @@ Exemplos:
 &#60;options:Selecione-Selecione F-Feminino M-Masculino> => Exemplo de como devem ser passadas as options de input select   
 
 **Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**
-**No momento de passar os atributos, você deve se perguntar: quais atributos esse input ou tag suporta?**
+
+**No momento de passar os atributos, você deve se perguntar:   
+
+**- Quais atributos esse input ou tag suporta?**
+
 **Atributos mais comuns utilizados**
 - name
 - id
@@ -197,9 +211,8 @@ $dados_form= [
 	"type:div",	//fechando a div que envolve o input
 
 	//Input submit	
-	"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-primary btn-lg btn-block mt-4 mb-5",
-
-		];
+	"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-primary btn-lg btn-block mt-4 mb-5",    
+];
 
 
 **use Core&#92;{CriaArrayTrait,GeraFormularioClass};**  
