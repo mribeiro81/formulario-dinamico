@@ -26,19 +26,19 @@ $dados_form= [
 **$formulario->render($dados_form);   
 
 #### Tipos suportados:
-form: para configurar as tags de abertura e fechamento do formulário    
-button: para configurar o botão do formulário    
-text   
-hidden   
-email   
-tel   
-password   
-date   
-file   
-search   
-url  
-radio  
-checkbox  
+- form: para configurar as tags de abertura e fechamento do formulário    
+- button: para configurar o botão do formulário    
+- text   
+- hidden   
+- email   
+- tel   
+- password   
+- date   
+- file   
+- search   
+- url  
+- radio  
+- checkbox  
 
 
 #### Informações sobre como os parâmetros devem ser informados:
