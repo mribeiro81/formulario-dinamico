@@ -19,11 +19,11 @@ $dados_form= [
 ];	  						
 
 
-**use Core&#92;{CriaArrayTrait,GeraFormularioClass};  
+** use Core&#92;{CriaArrayTrait,GeraFormularioClass};  
 
-**$dados_form = CriaArrayTrait::geraArray($dados_form);  
-**$formulario = new GeraFormularioClass();  
-**$formulario->render($dados_form);   
+** $dados_form = CriaArrayTrait::geraArray($dados_form);  
+** $formulario = new GeraFormularioClass();  
+** $formulario->render($dados_form);   
 
 #### Tipos suportados:
 - form: para configurar as tags de abertura e fechamento do formulário    
