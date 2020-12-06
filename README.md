@@ -41,7 +41,8 @@ Ao utilizar a tag div, você deve abrir, passar atributos necessários(class, id
 Veja exemplos no array de exemplo **$dados_form**.    
 - p   
 Pode ser utilizado para inserir um parágrafo antes ou depois do input do formulário.   
-É possível passar atributos como class e id. Não é necessário fechar da tag p.     
+É possível passar atributos como class e id.    
+Não é necessário fechar da tag p.        
 - span   
 Pode ser inserido antes ou depois do input do formulário.   
 É possível passar atributos como class e id para o span.     
