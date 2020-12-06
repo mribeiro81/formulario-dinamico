@@ -1,0 +1,16 @@
+{
+    "name": "vendor/criaform",
+    "description": "Pacote para criar formulário de forma dinâmica",
+    "authors": [
+        {
+            "name": "mribeiro81",
+            "email": "mribeiro81@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+     	"psr-4":{
+     		"Core\\" : "core/"    		
+     	}
+     }
+}

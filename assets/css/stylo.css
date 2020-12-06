@@ -1,0 +1,30 @@
+
+.header-background{
+  background-color: #4B0082 !important;
+  color: #ffffff;
+  padding:40px 20px 40px;
+  border-radius: 10px;
+}
+
+main{
+	background-color: #f7f7f7 !important;
+	border-radius: 5px;
+}
+
+body{
+	background-color: #000;
+	font-size: 1.2em;
+}
+
+
+.alert-info{
+	background-color: #A020F0 !important;
+	color: #ffffff !important;
+	border-radius: 10px;
+	border-color: #fff;
+}
+
+#mysql{
+	margin:20px;
+}
+
