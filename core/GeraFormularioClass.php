@@ -17,8 +17,9 @@ class GeraFormularioClass extends CriaCampoFormAbstract
 		$html1="";
 		$html2="";
 		$html3="";
-		$inputs_metodo_radioCheckbox = ['radio','checkbox'];
-		$inputs_metodo_coringa = ['text', 'hidden', 'email', 'tel', 'password', 'date', 'file', 'search', 'url'];
+		
+		$inputs_metodo_coringa = ['submit', 'button', 'text', 'radio', 'checkbox', 'hidden', 'email', 'tel', 'password', 'date', 'file', 'range', 'color', 'reset' , 'week', 'image', 'month', 'time', 'datetime-local', 'search', 'url'];
+
 		
 		foreach ($dados_form as $campo) 
 		{			
@@ -27,23 +28,15 @@ class GeraFormularioClass extends CriaCampoFormAbstract
 				
 				case 'form':
 						$html1.= $this->form($campo);
-					break;
+					break;					
 
-				case 'button':
-						$html3.= $this->button($campo);
-					break;
-
-				case 'submit':
-						$html3.= $this->submit($campo);
-					break;								
+				case 'label':
+						$html2.= $this->label($campo);
+					break;										
 
 				case (in_array($campo['type'], $inputs_metodo_coringa)):
 						$html2.= $this->coringa($campo);
-					break;
-
-				case (in_array($campo['type'], $inputs_metodo_radioCheckbox)):
-						$html2.= $this->radioCheckbox($campo);
-					break;		
+					break;					
 				
 				case 'textarea':
 						$html2.= $this->textarea($campo);
@@ -52,6 +45,14 @@ class GeraFormularioClass extends CriaCampoFormAbstract
 				case 'select':
 						$html2.= $this->select($campo);
 					break;
+
+				case 'div':
+						$html2.= $this->div($campo);
+					break;
+
+				case ('p' || 'span'):
+						$html2.= $this->paragrafoESpan($campo);
+					break;	
 
 				default:
 					echo "Erro: Tipo do campo não informado.";
