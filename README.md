@@ -3,7 +3,7 @@ SOBRE ESSE DIRETÓRIO
 
 ### Aqui consta um pacote que pode ser utilizado para criar formulário de forma dinâmica.
 
-##### Como utilizar:
+#### Como utilizar:
 Crie um array no seguinte formato, listando os campos que deseja no formulário:  
 
 $dados_form= [  
@@ -19,14 +19,29 @@ $dados_form= [
 ];	  						
 
 
-use Core&#92;{CriaArrayTrait,GeraFormularioClass};  
+**use Core&#92;{CriaArrayTrait,GeraFormularioClass};  
 
-$dados_form = CriaArrayTrait::geraArray($dados_form);  
-$formulario = new GeraFormularioClass();  
-$formulario->render($dados_form);   
+**$dados_form = CriaArrayTrait::geraArray($dados_form);  
+**$formulario = new GeraFormularioClass();  
+**$formulario->render($dados_form);   
+
+#### Tipos suportados:
+form: para configurar as tags de abertura e fechamento do formulário    
+button: para configurar o botão do formulário    
+text   
+hidden   
+email   
+tel   
+password   
+date   
+file   
+search   
+url  
+radio  
+checkbox  
 
 
-##### Informações sobre como os parâmetros devem ser informados:
+#### Informações sobre como os parâmetros devem ser informados:
 
 Cada item do array deve ser composto por <chave:valor|>:  
 - chave: é o identificador  
