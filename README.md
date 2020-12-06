@@ -27,21 +27,25 @@ $dados_form= [
 
 #### Tipos suportados:
 - form: para configurar as tags de abertura e fechamento do formulário    
-- button: para configurar o botão do formulário    
-- text   
+- button: para configurar botão do formulário  
+- submit: para configurar botão do formulário   
+- text 
+- textearea
+- radio  
+- checkbox  
+- select 
+- file 
 - hidden   
 - email   
 - tel   
 - password   
-- date   
-- file   
+- date 
 - search   
 - url  
-- radio  
-- checkbox  
 
 
-#### Informações sobre como os parâmetros devem ser informados:
+
+#### Informações sobre como os parâmetros devem ser informados no array:
 
 Cada item do array deve ser composto por <chave:valor|>:  
 - chave: é o identificador  
