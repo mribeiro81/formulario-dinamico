@@ -77,18 +77,16 @@ Cada item do array deve ser composto por <chave:valor|>:
 "**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",      
 
 
-**Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**     
-
+**Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**       
 **Exemplos**        
 **&#60;chave:valor|>** => modo aceito      
 **&#60;chave:valor1 valor2 valor3|>** => modo aceito SOMENTE para classes e options     
-**&#60;options:Selecione-Selecione F-Feminino M-Masculino>** => Exemplo de como devem ser passadas as options de input select     
+**&#60;options:Selecione-Selecione F-Feminino M-Masculino>** => Exemplo de como devem ser passadas as options de input select  
 
-**Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**
 
-**No momento de passar os atributos, você deve se perguntar:**   
-
-**- Quais atributos esse input ou tag suporta?**
+**Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
+**No momento de passar os atributos, você deve se perguntar:**     
+**- Quais atributos esse input ou tag suporta?**  
 
 **Atributos mais comuns utilizados**
 - name
@@ -105,9 +103,9 @@ Cada item do array deve ser composto por <chave:valor|>:
 		
 #### Exemplo prático para utilização:
 
-Crie um array no seguinte formato, listando os campos que você deseja no formulário.  
+Crie um array no formato mostrado abaixo, listando os campos que você deseja no formulário.  
 
-Criei um array grande, para que possa ver a utilização prática de campos input, div, p.
+O array que criei é grande, para que possa ver a utilização prática de campos input, div, p.
 
 
 $dados_form= [
