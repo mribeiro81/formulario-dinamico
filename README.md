@@ -50,15 +50,15 @@ Não é necessário fechar tag span.
 
 ### Informações sobre como os atributos devem ser passados no array:
 
-**Cada item do array deve ser composto por &#60;chave:valor|>:**    
+**1. Cada item do array deve ser composto por &#60;chave:valor|>:**    
 - chave: é o identificador    
 - (:) dois pontos: é o separador entre a chave e o valor    
 - valor: é o valor a ser associado a chave. Pode passar mais de um valor em parâmetros onde fizer sentido, como por exemplo duas ou mais classes para um input ou uma div.    
 - (|) pipe: é o separador entre um atributo e outro	    			
 
-**Adicione os itens no array na ordem em que você deseja que seja exibido no formulário.**  
+**2. Adicione os itens no array na ordem em que você deseja que seja exibido no formulário.**  
 
-**Todos os itens do array devem conter o tipo do atributo que será criado.**  
+**3. Todos os itens do array devem conter o tipo do atributo que será criado.**  
 
 **Exemplo 1**      
 "**type:form**|action:gravar.php|method:post|name:frmContato|id:frmContato",  
@@ -77,18 +77,19 @@ Não é necessário fechar tag span.
 "**type:select**|name:sexo|id:sexo|**options**:*Selecione-Selecione F-Feminino M-Masculino*|class:form-control required",      
 
 
-**Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**       
+**4. Não deve haver espaço entre a chave e o valor, exceto se o parâmetro possuir mais de um valor, como é o caso de classes e options de input select.**       
 **Exemplos**        
 **&#60;chave:valor|>** => modo aceito      
 **&#60;chave:valor1 valor2 valor3|>** => modo aceito SOMENTE para classes e options     
 **&#60;options:Selecione-Selecione F-Feminino M-Masculino>** => Exemplo de como devem ser passadas as options de input select  
 
 
-**Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
-**No momento de passar os atributos, você deve se perguntar:**     
-**- Quais atributos esse input ou tag suporta?**  
+**5. Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
 
-**Atributos mais comuns utilizados**
+**No momento de passar os atributos, você deve se perguntar:**       
+**- Quais atributos esse input ou tag suporta?**    
+
+**6. Atributos mais comuns utilizados**
 - name
 - id
 - value
@@ -100,7 +101,7 @@ Não é necessário fechar tag span.
 - class
 
 		
-#### Exemplo prático para utilização:
+### Exemplo prático para utilização:
 
 Crie um array no formato mostrado abaixo, listando os campos que você deseja no formulário.  
 
