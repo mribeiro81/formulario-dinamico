@@ -114,8 +114,8 @@ O array que criei é grande, para que possa ver a utilização prática de campo
 
 $dados_form= [
 
-	//Exemplo de como criar a tag form
-	"type:form|action:gravar.php|method:post|name:frmContato|id:frmContato",
+	//form
+	"type:form|action:gravar.php|method:post|enctype:multipart/form-data|autocomplete:off|target:_self|name:frmContato|id:frmContato",
 
 	//inut hidden
 	"type:hidden|name:token|id:token|value:".md5(date("Y-m-d h:i:s"))."",
