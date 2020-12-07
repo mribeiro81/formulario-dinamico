@@ -27,7 +27,7 @@
 
 				$dados_form= [
 
-					//Exemplo de como criar a tag form
+					//form
 					"type:form|action:gravar.php|method:post|enctype:multipart/form-data|autocomplete:off|target:_self|name:frmContato|id:frmContato",
 
 					//inut hidden
