@@ -224,7 +224,7 @@ $dados_form= [
 ];			
 
 
-**use Core&#92;{CriaArrayTrait,GeraFormularioClass};**  
+**use Core&#92;{CriaArrayTrait, GeraFormularioClass};**  
 
 **$dados_form = CriaArrayTrait::geraArray($dados_form);**  
 **$formulario = new GeraFormularioClass();**  
