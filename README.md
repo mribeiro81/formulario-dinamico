@@ -102,6 +102,8 @@ Não é necessário fechar tag span.
 - readonly
 - class
 
+**7. O atributo &#60;obrigatorio> adiciona um asterísco * após o label do formulário, para indicar que o campo é de preencimento obrigatório. Não faz a validação**
+
 		
 ### Exemplo prático para utilização:
 
@@ -169,52 +171,57 @@ $dados_form= [
 
 
 	//Parágrafo
-	"type:p|class:paragrafo-form|value:Selecione uma opção",
+	"type:p|class:paragrafo-form|value:Selecione uma opção*",
 
 	"type:div|class:form-check",  //abrindo div que irá envolver o input
 		//input radio
 		"type:radio|name:item|id:servico|value:1|title:Serviço|class:form-check-input required-radio",
-		"type:label|for:servico|value:Serviço|class:form-check-label|obrigatorio:*", //Label do input
+		"type:label|for:servico|value:Serviço|class:form-check-label", //Label do input
 	"type:div",	//fechando a div que envolve o input 
 
 	"type:div|class:form-check", //abrindo div que irá envolver o input	
 	    //input radio									
 		"type:radio|name:item|id:desenvolvimento|value:2|title:Desenvolvimento|class:form-check-input required-radio",
-		"type:label|for:desenvolvimento|value:Desenvolvimento|class:form-check-label|obrigatorio:*", //Label do input
+		"type:label|for:desenvolvimento|value:Desenvolvimento|class:form-check-label", //Label do input
 	"type:div",	//fechando a div que envolve o input 	
 
 	"type:div|class:form-check",  //abrindo div que irá envolver o input
 		//input radio
 		"type:radio|name:item|id:suporte|value:3|title:Suporte|class:form-check-input required-radio",
-		"type:label|for:suporte|value:Suporte|class:form-check-label|obrigatorio:*", //Label do input					
+		"type:label|for:suporte|value:Suporte|class:form-check-label", //Label do input					
 	"type:div",	//fechando a div que envolve o input 
 
 
 	//Parágrafo
-	"type:p|class:paragrafo-form mt-4|value:Informe como prefere ser informado sobre nossas novidades",
+	"type:p|class:paragrafo-form mt-4|value:Informe como prefere ser informado sobre nossas novidades*",
 	
 	"type:div|class:form-check",  //abrindo div que irá envolver o input
 	    //input checkbox
 		"type:checkbox|name:contatoEmail|id:contatoEmail|value:1|checked:|label:E-mail|title:Contato por e-email|class:form-check-input required-checkbox",	
-		"type:label|for:contatoEmail|value:Desejo receber novidades por e-mail|class:form-check-label|obrigatorio:*", //Label do input
+		"type:label|for:contatoEmail|value:Desejo receber novidades por e-mail|class:form-check-label", //Label do input
 	"type:div",	//fechando a div que envolve o input
 
 	"type:div|class:form-check",  //abrindo div que irá envolver o input
 	    //input checkbox
 		"type:checkbox|name:contatoSms|id:contatoSms|value:2|title:Contato por SMS|class:form-check-input required-checkbox",	
-		"type:label|for:contatoSms|value:Desejo receber novidades por SMS|class:form-check-label|obrigatorio:*", //Label do input
+		"type:label|for:contatoSms|value:Desejo receber novidades por SMS|class:form-check-label", //Label do input
 	"type:div",	//fechando a div que envolve o input								
 
 	
 	"type:div|class:form-group mt-3",  //abrindo div que irá envolver o input
 		//input color
-		"type:label|for:cor|value:Clique para selecionar uma cor", //Label do input
-		"type:color|name:cor|id:cor|value:#A52A2A|class:form-control cor",
+		"type:label|for:cor|value:Clique para selecionar uma cor*", //Label do input
+		"type:color|name:cor|id:cor|value:#8B008B|class:form-control cor",
 	"type:div",	//fechando a div que envolve o input
 
+	"type:div|class:alert alert-warning mt-4",
+	"type:p|value:Esse é apenas um exemplo de como criar um formulário dinâmico.<br>- Não há validação de dados;<br>- Não foi criada a página seguinte a essa para receber e processar os dados.",
+	"type:div",
+
 	//Input submit	
-	"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-primary btn-lg btn-block mt-4 mb-5",    
-];
+	"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-success btn-lg btn-block mt-4 mb-4",
+
+];			
 
 
 **use Core&#92;{CriaArrayTrait,GeraFormularioClass};**  
