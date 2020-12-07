@@ -30,12 +30,6 @@ abstract class CriaCampoFormAbstract
 	}
 
 	
-	/*
-		O método coringa() cria os seguintes elementos:
-		submit, button, text, radio, checkbox, hidden, email, tel, password, date, 
-		file, range, color, reset, week, image, month, time, datetime-local, search, url
-
-	*/
 	protected function coringa($dados)
 	{	
 		$dados_obrigatorios=[];
