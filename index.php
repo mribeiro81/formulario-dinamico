@@ -8,13 +8,17 @@
 </head>
 <body>
 
+<header class="container header-background mt-1 mb-1">
+	
+	<h2 class="mt-5">Exemplo de formulário criado de forma dinâmica.</h2>
+
+</header>	
+
 <main class="container">
 		
 	<div class="row">
 		
-		<div class="col-sm mb-4">
-
-			<h2 class="mt-5">Exemplo de formulário criado de forma dinâmica.</h2>
+		<div class="col-sm mb-4">			
 
 			<?php				
 
@@ -120,11 +124,11 @@
 					"type:div|class:form-group mt-3",  //abrindo div que irá envolver o input
 						//input color
 						"type:label|for:cor|value:Clique para selecionar uma cor", //Label do input
-						"type:color|name:cor|id:cor|value:#A52A2A|class:form-control cor",
+						"type:color|name:cor|id:cor|value:#8B008B|class:form-control cor",
 					"type:div",	//fechando a div que envolve o input
 
 					//Input submit	
-					"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-primary btn-lg btn-block mt-4 mb-5",
+					"type:submit|name:enviar|id:enviar|value:Enviar|class:btn btn-success btn-lg btn-block mt-5 mb-4",
 
 						];
 
