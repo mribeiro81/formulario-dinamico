@@ -105,11 +105,9 @@ abstract class FormularioAbstract
 
 	protected function verificaParametros(array $dados_obrigatorios, array $dados)
 	{
-
-		if(count($dados_obrigatorios) < 1 || count($dados) < 1 ){
-			echo "O método verificaDados() da classe CriaCampoFormAbstract precisa receber como parâmetro arrays válidos.";
-			exit();
-		}		
+	
+		$this->verificaArray($dados_obrigatorios,"verificaParametros");
+		$this->verificaArray($dados,"verificaParametros");		
 
 		$html="";
 		foreach($dados_obrigatorios as $key)
@@ -137,12 +135,10 @@ abstract class FormularioAbstract
 	
 	protected function organizaParametros(array $dados, $dados_omitir = "")
 	{
-		if(count($dados) < 1 ){
-			echo "O método organizaParametros() da classe CriaCampoFormAbstract precisa receber como parâmetro um array válido.";
-			exit();
-		}
+		$this->verificaArray($dados, "organizaParametros");
 
-		if(is_array($dados_omitir)){			
+		if(is_array($dados_omitir)){
+			$this->verificaArray($dados_omitir, "organizaParametros");			
 			$dados = array_diff($dados,	$dados_omitir);
 		}
 
@@ -161,6 +157,24 @@ abstract class FormularioAbstract
 		}
 
 		return substr($parametros,1);
+
+	}
+
+
+	protected function inputsMetodoCoringa()
+	{
+
+		return ['submit', 'button', 'text', 'radio', 'checkbox', 'hidden', 'email', 'tel', 'password', 'date', 'file', 'range', 'color', 'reset' , 'week', 'image', 'month', 'time', 'datetime-local', 'search', 'url'];
+	}
+
+
+	protected function verificaArray(array $dados,string $metodo)
+	{
+
+		if(count($dados) < 1){
+			echo "O método ".$metodo."() precisa receber como parâmetro um array válido.";
+			exit();
+		}
 
 	}
 
