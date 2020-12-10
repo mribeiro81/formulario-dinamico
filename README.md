@@ -225,7 +225,7 @@ $dados_form= [
 ];			
 
 
-**use Src\{FormularioClass};**
+**use Src&#92;{FormularioClass};**
 				
 **$formulario = new FormularioClass();**  
 **$formulario->render($dados_form);**     
