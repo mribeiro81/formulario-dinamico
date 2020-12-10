@@ -4,7 +4,7 @@ namespace Src;
 abstract class FormularioAbstract
 {
 	
-	protected function form($dados){
+	protected function form(array $dados){
 
 		$dados_obrigatorios= ["action","method","id"];
 		$this->verificaParametros($dados_obrigatorios,$dados);
@@ -17,7 +17,7 @@ abstract class FormularioAbstract
 	}
 	
 
-	protected function label($dados){
+	protected function label(array $dados){
 
 		$dados_obrigatorios= ["for","value"]; 
 		$this->verificaParametros($dados_obrigatorios,$dados);
@@ -30,7 +30,7 @@ abstract class FormularioAbstract
 	}
 
 	
-	protected function coringa($dados)
+	protected function coringa(array $dados)
 	{	
 		$dados_obrigatorios=[];
 	    $dados_obrigatorios= (($dados["type"] == "submit") || ($dados["type"] == "button")) ? ["name","id","value"] : ["name","id"];
@@ -43,7 +43,7 @@ abstract class FormularioAbstract
 	}	
 
 
-	protected function textarea($dados)
+	protected function textarea(array $dados)
 	{	
 		$dados_obrigatorios=[];
 		$dados_obrigatorios= ["name","id"];
@@ -57,7 +57,7 @@ abstract class FormularioAbstract
 	}
 
 
-	protected function select($dados)
+	protected function select(array $dados)
 	{	
 		$dados_obrigatorios=[];
 		$dados_obrigatorios= ["name","id","options"];
@@ -76,7 +76,7 @@ abstract class FormularioAbstract
 	}
 
 
-	protected function div($dados){
+	protected function div(array $dados){
 
 		if(count($dados) > 1){
 			$parametros = $this->organizaParametros($dados,"");
@@ -92,7 +92,7 @@ abstract class FormularioAbstract
 	}
 
 
-	protected function paragrafoESpan($dados){
+	protected function paragrafoESpan(array $dados){
 		
 		$parametros = $this->organizaParametros($dados);
 		$dados_omitir = ["value" => $dados["value"]];
@@ -103,7 +103,7 @@ abstract class FormularioAbstract
 	}
 
 
-	protected function verificaParametros($dados_obrigatorios,$dados)
+	protected function verificaParametros(array $dados_obrigatorios, array $dados)
 	{
 
 		if(count($dados_obrigatorios) < 1 || count($dados) < 1 ){
@@ -135,7 +135,7 @@ abstract class FormularioAbstract
 	}
 
 	
-	protected function organizaParametros($dados, $dados_omitir = "")
+	protected function organizaParametros(array $dados, $dados_omitir = "")
 	{
 		if(count($dados) < 1 ){
 			echo "O método organizaParametros() da classe CriaCampoFormAbstract precisa receber como parâmetro um array válido.";
