@@ -1,7 +1,8 @@
 SOBRE ESSE DIRETÓRIO
 ====================
 
-### Aqui consta um pacote que pode ser utilizado para criar formulário de forma dinâmica.
+### Aqui consta uma aplicação para criar formulário de modo dinâmico. 
+### Você monta um array com parâmetros em um formato pré-estabelecido, instancia uma classe, passando o array como parâmetro e a classe gera e retorna o código html do formulário.
 
 ### Tipos suportados:
  
@@ -224,11 +225,10 @@ $dados_form= [
 ];			
 
 
-**use Core&#92;{CriaArrayTrait, GeraFormularioClass};**  
-
-**$dados_form = CriaArrayTrait::geraArray($dados_form);**  
-**$formulario = new GeraFormularioClass();**  
-**$formulario->render($dados_form);**   
+**use Src\{FormularioClass};**
+				
+**$formulario = new FormularioClass();**  
+**$formulario->render($dados_form);**     
 
   
 
