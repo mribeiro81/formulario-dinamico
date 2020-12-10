@@ -137,10 +137,10 @@
 						];
 
 				
-				use Core\{CriaArrayTrait, GeraFormularioClass};
+				use Src\{FormularioClass};
 
-				$dados_form = CriaArrayTrait::geraArray($dados_form);
-				$formulario = new GeraFormularioClass();
+				
+				$formulario = new FormularioClass();
 				$formulario->render($dados_form); 
 			?>
 
