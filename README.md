@@ -216,7 +216,8 @@ $dados_form= [
 ];			
 
 
-**use Src&#92;{FormFacadeClass};** 				
+**use Src&#92;{FormFacadeClass};** 	
+			
 **$formulario = new FormFacadeClass($dados_form);**  
      
 
