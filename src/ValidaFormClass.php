@@ -68,6 +68,11 @@ Class ValidaFormClass
 				$parametros_aceitos= ["class", "id", "autocomplete", "autofocus", "disabled", "form", "maxlength", 
 				"name", "pattern", "placeholder", "readonly", "required", "size", "title", "type", "value"];
 				break;
+
+			case 'number':
+				$parametros_aceitos= ["class", "id", "autocomplete", "autofocus", "defaultValue", "disabled", "form", "list", "max", "min",
+				"name", "pattern", "placeholder", "readonly", "required", "step", "title", "type", "value"];
+				break;	
 				
 			case 'password':
 				$parametros_aceitos= ["class", "id", "autocomplete", "autofocus", "disabled", "form", "maxlength", "minlength", 
