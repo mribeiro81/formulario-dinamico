@@ -87,23 +87,14 @@ Não é necessário fechar tag span.
 **&#60;options:Selecione-Selecione F-Feminino M-Masculino>** => Exemplo de como devem ser passadas as options de input select  
 
 
-**5. Você pode passar qualquer valor que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
+**5. Você pode passar qualquer parâmetro que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
 
-**No momento de passar os atributos, você deve se perguntar:**       
-**- Quais atributos esse input ou tag suporta?**    
+Para não entendiá-lo com uma lista enorme de parâmetros que cada input suporta, na hora de passar os parâmetros, você deve se perguntar:       
+**- Quais atributos esse input ou tag suporta?** 
+**Se o input suporta o parâmetro que você deseja passar, então pode passar tranquilo.**
 
-**6. Atributos mais comuns utilizados**
-- name
-- id
-- value
-- placeholder
-- title
-- pattern
-- checked
-- readonly
-- class
 
-**7. O atributo &#60;obrigatorio> adiciona um asterísco * após o label do formulário, para indicar que o campo é de preencimento obrigatório. Não faz a validação**
+**6. O atributo &#60;obrigatorio> adiciona um asterísco * após o label do formulário, para indicar que o campo é de preencimento obrigatório. Não faz a validação**
 
 		
 ### Exemplo prático para utilização:
@@ -225,10 +216,9 @@ $dados_form= [
 ];			
 
 
-**use Src&#92;{FormularioClass};** 
-				
-**$formulario = new FormularioClass();**  
-**$formulario->render($dados_form);**     
+**use Src&#92;{FormFacadeClass};** 				
+**$formulario = new FormFacadeClass($dados_form);**  
+     
 
   
 
