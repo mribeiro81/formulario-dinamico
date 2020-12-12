@@ -37,7 +37,7 @@
 					"type:div|class:form-group mt-3", //abrindo div que irá envolver o input
 						"type:label|for:nome|value:Nome|obrigatorio:*", //Label do input
 						//input text
-						"type:text|name:nome|id:nome|class:form-control required|placeholder:Informe o seu nome|title:Informe o seu nome", 
+						"type:TEXT|name:nome|id:nome|class:form-control required|placeholder:Informe o seu nome|title:Informe o seu nome", 
 					"type:div", //fechando a div que envolve o input
 
 					"type:div|class:form-group mt-3",  //abrindo div que irá envolver o input
@@ -137,11 +137,9 @@
 						];
 
 				
-				use Src\{FormularioClass};
-
+				use Src\{FormFacadeClass};				
+				$formulario = new FormFacadeClass($dados_form);
 				
-				$formulario = new FormularioClass();
-				$formulario->render($dados_form); 
 			?>
 
 
