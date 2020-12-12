@@ -90,8 +90,8 @@ Não é necessário fechar tag span.
 **5. Você pode passar qualquer parâmetro que seja válido, ou seja, de acordo com o suportado pelo campo input ou tag a ser criado**  
 
 Para não entendiá-lo com uma lista enorme de parâmetros que cada input suporta, na hora de passar os parâmetros, você deve se perguntar:       
-**- Quais atributos esse input ou tag suporta?** 
-**Se o input suporta o parâmetro que você deseja passar, então pode passar tranquilo.**
+- Quais atributos esse input ou tag suporta?  
+Se o input suporta o parâmetro que você deseja passar, então pode passar tranquilo.  
 
 
 **6. O atributo &#60;obrigatorio> adiciona um asterísco * após o label do formulário, para indicar que o campo é de preencimento obrigatório. Não faz a validação**
