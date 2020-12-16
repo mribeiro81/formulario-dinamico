@@ -46,8 +46,7 @@ trait UtilFormTrait
 		}
 
 		if(!empty($html)){
-			echo $html;
-			exit();
+			throw new Exception($html);
 		}
 
 	}
@@ -56,18 +55,9 @@ trait UtilFormTrait
 	public function organizaParametros(array $dados, $dados_omitir = "")
 	{		
 
-		if(is_array($dados_omitir)){		
+		if(is_array($dados_omitir)){					
 			$dados = array_diff($dados,	$dados_omitir);
-		}
-
-		$dados = array_diff($dados,[
-				"type" => $dados["type"], 
-				"options" => $dados["options"], 
-				"obrigatorio" => $dados["obrigatorio"], 
-				"Obrigatorio" => $dados["Obrigatorio"],
-				"obrigatório" => $dados["obrigatório"],
-				"Obrigatório" => $dados["Obrigatório"],
-				]);			
+		}	
 
 		$parametros="";
 		foreach ($dados as $key => $value) {	
