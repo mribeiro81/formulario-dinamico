@@ -11,6 +11,7 @@ Class FormFacadeClass
 		
 		$valida = new ValidaFormClass();
 		$form_class = new FormClass();
-		$form = $form_class->render($valida, $dados_form);
+		echo $form_class->render($valida, $dados_form);
+
 	}
 }
