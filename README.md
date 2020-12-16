@@ -3,6 +3,8 @@ SOBRE ESSE DIRETÓRIO
 
 ### Aqui consta uma aplicação para criar formulário de modo dinâmico. 
 ### Você monta um array com parâmetros em um formato pré-estabelecido, instancia uma classe, passando o array como parâmetro e a classe gera e retorna o código html do formulário.
+### A aplicação foi testada utilizando PHPUnit. 
+### Caso você deseje realizar seus próprios testes antes de utilizar a biblioteca, a classe utilizada para realizar os testes está dentro do diretório testes.
 
 ### Tipos suportados:
  
