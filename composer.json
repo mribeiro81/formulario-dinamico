@@ -7,10 +7,17 @@
             "email": "mribeiro81@hotmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit" : "8.0.0"
+    },
     "autoload": {
      	"psr-4":{
      		"Src\\" : "src/"    		
      	}
-     }
+     },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Testes\\" : "testes"
+        }
+    }
 }

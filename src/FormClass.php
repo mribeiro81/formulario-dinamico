@@ -14,7 +14,7 @@ class FormClass extends FormAbstract
 		$dados_form = parent::preparaArray($dados_form);		
 		$html = $this->htmlForm($dados_form);
 
-		echo $html;
+		return $html;
 	}
 
 
@@ -58,8 +58,7 @@ class FormClass extends FormAbstract
 					break;	
 
 				default:
-					die("Erro: Tipo do campo não informado para o método htmlForm da classe FormClass.");
-					exit();
+					throw new Exception("Erro: Type do input não informado => FormClass->htmlForm().");				
 			}
 			
 		}	
