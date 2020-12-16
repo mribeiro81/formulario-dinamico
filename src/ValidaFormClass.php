@@ -151,8 +151,8 @@ Class ValidaFormClass
 				break;		
 				
 			default:
-				die("Type informado é inválido para o método valida da classe ValidaFormClass.");
-				break;
+				throw new Exception("Type informado é inválido: ValidaFormClass->valida().");
+				
 		}		
 
 		return $this->removeParametrosNaoAceitos($dados, $parametros_aceitos);
