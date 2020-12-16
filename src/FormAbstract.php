@@ -10,9 +10,11 @@ abstract class FormAbstract
 		
 		$dados_obrigatorios= ["action","method","id"];
 		$this->verificaParametros($dados_obrigatorios,$dados);
-		$dados = $this->valida->valida($dados);		
-		$parametros = $this->organizaParametros($dados);
+		$dados = $this->valida->valida($dados);	
+		$dados_omitir= ["type" => $dados["type"]];
+		$parametros = $this->organizaParametros($dados,$dados_omitir);
 
+		$html="";
 		$html = "<form ".$parametros.">\n";
 
 		return $html;
@@ -24,10 +26,12 @@ abstract class FormAbstract
 
 		$dados_obrigatorios= ["for","value"]; 
 		$this->verificaParametros($dados_obrigatorios,$dados);
-		$dados_omitir = ["for" => $dados["for"], "value" => $dados["value"]];
+		$dados_omitir = isset($dados["obrigatorio"]) ? ["for" => $dados["for"], "value" => $dados["value"], "type" => $dados["type"], "obrigatorio" => $dados["obrigatorio"]] : ["for" => $dados["for"], "value" => $dados["value"], "type" => $dados["type"]];
 		$parametros = $this->organizaParametros($dados, $dados_omitir);
+		isset($dados["obrigatorio"]) ? $obrigatorio = "*" : $obrigatorio = "";
 		
-		$html = "\t\t\t\t<label ".$parametros." for=".trim($dados["for"]).">&nbsp;".trim(ucfirst($dados["value"])).$dados["obrigatorio"]."</label>\n";		
+		$html="";
+		$html = "\t\t\t\t<label ".$parametros." for=\"".trim($dados["for"])."\">&nbsp;".trim(ucfirst($dados["value"])).$obrigatorio."</label>\n";		
 
 		return $html;
 	}
@@ -39,9 +43,11 @@ abstract class FormAbstract
 	    $dados_obrigatorios= (($dados["type"] == "submit") || ($dados["type"] == "button")) ? ["name","id","value"] : ["name","id"];
 		$this->verificaParametros($dados_obrigatorios,$dados);
 		$dados = $this->valida->valida($dados);
-		$parametros = $this->organizaParametros($dados,"");
+		$dados_omitir = isset($dados["obrigatorio"]) ? ["type" => $dados["type"], "obrigatorio" => $dados["obrigatorio"]] : ["type" => $dados["type"]];
+		$parametros = $this->organizaParametros($dados, $dados_omitir);
 		
-		$html= "\t\t\t\t<input type=".strtolower(trim($dados["type"]))." ".$parametros.">\n";					
+		$html="";
+		$html= "\t\t\t\t<input type=\"".strtolower(trim($dados["type"]))."\" ".$parametros.">\n";					
 
 		return $html;
 	}	
@@ -53,8 +59,11 @@ abstract class FormAbstract
 		$dados_obrigatorios= ["name","id"];
 		$this->verificaParametros($dados_obrigatorios,$dados);
 		$dados = $this->valida->valida($dados);
-		$parametros = $this->organizaParametros($dados);
+		$dados_omitir =  isset($dados["obrigatorio"]) ? ["type" => $dados["type"], "obrigatorio" => $dados["obrigatorio"]] : ["type" => $dados["type"]];
+		$parametros = $this->organizaParametros($dados,$dados_omitir);
+		$dados = $this->valida->valida($dados,$dados_omitir);
 		
+		$html="";
 		$html= "\t\t\t\t<textarea type=\"textarea\" ".$parametros."></textarea>\n";	
 
 		return $html;
@@ -67,15 +76,16 @@ abstract class FormAbstract
 		$dados_obrigatorios=[];
 		$dados_obrigatorios= ["name","id","options"];		
 		$this->verificaParametros($dados_obrigatorios,$dados);
+		$dados_omitir = isset($dados["obrigatorio"]) ? ["type" => $dados["type"], "options" => $dados["options"], "obrigatorio" => $dados["obrigatorio"]] :["type" => $dados["type"], "options" => $dados["options"]];
+		$parametros = $this->organizaParametros($dados,$dados_omitir);
 		$dados = $this->valida->valida($dados);
-
-		$parametros = $this->organizaParametros($dados);
 		
+		$html="";
 		$html.= "\t\t\t\t<select ".$parametros.">\n";		
 		$options = explode(" ", $dados["options"]);
 		foreach ($options as $option) {
 			$option = explode("-",$option);
-			$html.= "\t\t\t\t<option value='".trim($option[0])."'>".trim(ucfirst($option[1]))."</option>\n";
+			$html.= "\t\t\t\t<option value=\"".trim($option[0])."\">".trim(ucfirst($option[1]))."</option>\n";
 		}
 		$html.= "\t\t\t\t</select>\n";			
 
@@ -88,8 +98,10 @@ abstract class FormAbstract
 
 		if(count($dados) > 1){
 			$dados = $this->valida->valida($dados);
-			$parametros = $this->organizaParametros($dados,"");
+			$dados_omitir = ["type" => $dados["type"]];
+			$parametros = $this->organizaParametros($dados,$dados_omitir);
 
+			$html="";
 			if(!empty($parametros)){
 				$html = "\t\t\t<div ".$parametros.">\n";
 			}else{
@@ -105,11 +117,12 @@ abstract class FormAbstract
 	{
 		$dados_obrigatorios= [];
 		$parametros = $this->organizaParametros($dados);
-		$dados_omitir = ["value" => $dados["value"]];		
+		$dados_omitir = ["value" => $dados["value"], "type" => $dados["type"]];		
 		$parametros = $this->organizaParametros($dados, $dados_omitir);	
 		$dados = $this->valida->valida($dados);		
 
-		$html = "\t\t\t<".strtolower(trim($dados["type"]))." ".$parametros.">".$dados["value"]."</".trim($dados["span"]).">\n";
+		$html="";
+		$html = "\t\t\t<".strtolower(trim($dados["type"]))." ".$parametros.">".$dados["value"]."</".trim($dados["type"]).">\n";
 		return $html;
 	}
 
